@@ -1,0 +1,25 @@
+{
+  "name": "ubiq",
+  "version": "1.0.0",
+  "description": "One module for all frameworks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidhu2000/ubiq.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "bin": {
+    "ubiq": "index.js"
+  },
+  "author": "David Hu <davidhu314@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidhu2000/ubiq/issues"
+  },
+  "homepage": "https://github.com/davidhu2000/ubiq#readme"
+}
