@@ -1,6 +1,6 @@
 {
   "name": "ubiq",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "One module for all frameworks",
   "main": "index.js",
   "scripts": {
