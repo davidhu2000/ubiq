@@ -1,20 +1,26 @@
 #! /usr/bin/env node
-
+const fs = require('fs');
 const exec = require('child_process').exec;
+const execFile = require('child_process').execFile;
 
-const setupUbiq = require('./config.js');
-
-let config = {
-  frontend: '',
-  backend: ''
-}
+const configUbiq = require('./config/config.js');
 
 let command = process.argv[2];
+let name = process.argv[3];
+
+let config = JSON.parse( fs.readFileSync('./config/config.json').toString() );
 
 switch(command) {
-  case 'setup' || 'config':
-
-    config = configUbiq(config);
-    console.log(config);
+  case 'config':
+    configUbiq();
+    break;
+  case 'new':
+    const child = execFile(`${config.backend}`, [`new`, name], (error, stdout, stderr) => {
+      if (error) {
+          console.error('stderr', stderr);
+          throw error;
+      }
+      console.log(stdout);
+    });
     break;
 }
