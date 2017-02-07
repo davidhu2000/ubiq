@@ -4,7 +4,7 @@
   "description": "One module for all frameworks",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm install"
   },
   "repository": {
     "type": "git",
@@ -13,6 +13,7 @@
   "keywords": [
     "javascript"
   ],
+  "preferGlobal": "true",
   "bin": {
     "ubiq": "index.js"
   },
@@ -21,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/davidhu2000/ubiq/issues"
   },
-  "homepage": "https://github.com/davidhu2000/ubiq#readme"
+  "homepage": "https://github.com/davidhu2000/ubiq#readme",
+  "dependencies": {
+    "colors": "^1.1.2"
+  }
 }
